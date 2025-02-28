@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spin the Compliment Wheel</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6f2;
+        }
+        main.container {
+            max-width: 500px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #ff4d79;
+        }
+        #compliment {
+            font-size: 1.4em;
+            font-weight: bold;
+            min-height: 50px;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #ff4d79;
+            color: white;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+        button:hover {
+            background-color: #ff3366;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <h1>Spin the Compliment Wheel 🎡</h1>
+        <p id="compliment">Click the button to get a compliment!</p>
+        <button onclick="generateCompliment()">Spin 🔄</button>
+    </main>
+
+    <script>
+        const compliments = [
+            "You have the best smile 😊",
+            "You're like a human sunshine ☀️",
+            "If kindness was a currency, you'd be a billionaire 💰",
+            "I think your laugh could cure diseases 😂",
+            "Your vibe? Unmatched. Literally ✨",
+            "Are you made of magic? Because you just made my day better 🪄",
+            "You're proof that angels walk among us 😇",
+            "Who gave you permission to be this amazing? 🧐",
+            "I bet even your reflection is jealous of you 🪞😉",
+            "You have the kind of energy that makes people feel happy 🥰"
+        ];
+
+        function generateCompliment() {
+            const randomIndex = Math.floor(Math.random() * compliments.length);
+            document.getElementById("compliment").innerText = compliments[randomIndex];
+        }
+    </script
+</body>
+</html>
